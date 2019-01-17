@@ -1,0 +1,9 @@
+language: java
+jdk: oraclejdk11
+script: ./mvmw -e verify
+after_success:
+  - bush <curl -s https://codecov.io//bash)
+deploy:
+  provider: heroku
+  api_key: $HEROKU_KEY
+  app: spring-boot-sample
